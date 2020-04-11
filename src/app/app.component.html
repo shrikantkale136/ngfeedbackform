@@ -1,3 +1,6 @@
+
+<img src="https://cdn.pixabay.com/photo/2016/11/04/23/16/emogi-1799208_960_720.png" width="50">
+
 <hello name="{{ name }}"></hello>
 <div class="">
   <form #f="ngForm" (ngSubmit)="submit(f)">
@@ -14,9 +17,10 @@
       <div class="flex mb-10">
         <label for="{{item.name}}">{{item.name}}</label>
         <div class="range ml-2">
-          <input ngModel="{{item.value}}"
-              id="{{item.name}}" type="range" name="{{item.name}}"
+          <input [(ngModel)]="item.value" (change) = "getVal(item.name, item.value)"
+            type="range" name="{{item.name}}"
               min="1" max="5" [value]="item.value" step="1"/>
+          <img id="{{item.name}}" width="30">
         </div>
       </div>
     </div>
