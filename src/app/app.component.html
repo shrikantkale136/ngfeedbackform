@@ -1,0 +1,29 @@
+<hello name="{{ name }}"></hello>
+<div class="">
+  <form #f="ngForm" (ngSubmit)="submit(f)">
+    <div class="inline">
+      <ul>
+        <li>Worst</li>
+        <li>Bad</li>
+        <li>Neutral</li>
+        <li>Good</li>
+        <li>Best</li>
+      </ul> 
+    </div>
+    <div class="" *ngFor="let item of feedbackArray">
+      <div class="flex mb-10">
+        <label for="{{item.name}}">{{item.name}}</label>
+        <div class="range ml-2">
+          <input ngModel="{{item.value}}"
+              id="{{item.name}}" type="range" name="{{item.name}}"
+              min="1" max="5" [value]="item.value" step="1"/>
+        </div>
+      </div>
+    </div>
+    <div class="flex">
+      <label>Feedback</label>
+      <textarea name="feedback" cols="27" #feedback="ngModel" ngModel></textarea>
+    </div>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</div>
