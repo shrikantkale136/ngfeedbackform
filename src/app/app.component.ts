@@ -16,8 +16,8 @@ export class AppComponent  {
   ];
   element: HTMLElement;
   images = [
-    {id : 1, img: "https://cdn.pixabay.com/photo/2017/03/05/21/55/emoticon-2120024_960_720.png"},
-    {id : 2, img: "https://cdn.pixabay.com/photo/2016/11/04/23/16/emogi-1799208_960_720.png"}]
+    {id : 1, img: "https://cdn.pixabay.com/photo/2017/03/05/21/55/emogi-1799208_960_720.png"},
+    {id : 2, img: "https://cdn.pixabay.com/photo/2016/11/04/23/16/emoticon-2120024_960_720.png"}]
 
 public img ;
 
